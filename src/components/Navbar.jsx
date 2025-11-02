@@ -21,8 +21,8 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <a href="/" className="flex items-center gap-2 group" aria-label="Go to home">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-[#0EA5A4] to-[#7C3AED] grid place-items-center shadow-inner shadow-black/40">
-              <Rocket className="h-5 w-5 text-white group-hover:scale-110 transition-transform" />
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-600 grid place-items-center shadow-inner shadow-black/40 ring-1 ring-white/10">
+              <Rocket className="h-5 w-5 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.35)] group-hover:scale-110 transition-transform" />
             </div>
             <div className="leading-tight">
               <p className="text-white font-semibold tracking-tight">Review Tech Club</p>
@@ -36,7 +36,13 @@ export default function Navbar() {
             <a href="/members" className="text-white/80 hover:text-white transition-colors">Members</a>
             <a href="/events" className="text-white/80 hover:text-white transition-colors">Events</a>
             <a href="/resources" className="text-white/80 hover:text-white transition-colors">Resources</a>
-            <a href="/register" className="ml-2 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white bg-[#0EA5A4] hover:brightness-110 shadow-lg shadow-teal-500/20 transition-all" aria-label="Apply to Join">Apply</a>
+            <a
+              href="/register"
+              className="ml-2 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white bg-cyan-500/90 hover:brightness-110 shadow-lg shadow-cyan-500/20 ring-1 ring-cyan-300/40 transition-all"
+              aria-label="Apply to Join"
+            >
+              Apply
+            </a>
           </nav>
 
           <button onClick={() => setOpen(true)} className="md:hidden text-white p-2" aria-label="Open menu">
@@ -52,14 +58,20 @@ export default function Navbar() {
               <X className="h-6 w-6" />
             </button>
           </div>
-          <div className="mx-6 mt-20 rounded-2xl border border-white/10 bg-[#0F172A] p-6 shadow-2xl">
+          <div className="mx-6 mt-20 rounded-2xl border border-white/10 bg-[#0F172A]/90 p-6 shadow-2xl backdrop-blur-xl">
             <div className="flex flex-col gap-4 text-base">
               <a href="/content" className="text-white/90 hover:text-white" onClick={() => setOpen(false)}>Content</a>
               <a href="/achievements" className="text-white/90 hover:text-white" onClick={() => setOpen(false)}>Achievements</a>
               <a href="/members" className="text-white/90 hover:text-white" onClick={() => setOpen(false)}>Members</a>
               <a href="/events" className="text-white/90 hover:text-white" onClick={() => setOpen(false)}>Events</a>
               <a href="/resources" className="text-white/90 hover:text-white" onClick={() => setOpen(false)}>Resources</a>
-              <a href="/register" className="mt-2 inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white bg-[#0EA5A4] hover:brightness-110 shadow-lg shadow-teal-500/20" onClick={() => setOpen(false)}>Apply</a>
+              <a
+                href="/register"
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white bg-cyan-500/90 hover:brightness-110 shadow-lg shadow-cyan-500/20 ring-1 ring-cyan-300/40"
+                onClick={() => setOpen(false)}
+              >
+                Apply
+              </a>
             </div>
           </div>
         </div>
